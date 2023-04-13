@@ -157,6 +157,14 @@ void ShelSynthAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
             //lfo
         }
     }
+    
+    for (juce::MidiMessageMetadata metadata : midiMessages)
+    {
+        if(metadata.numBytes == 3)
+        {
+        juce::Logger::writeToLog ("Момент времени: " + juce::String (metadata.getMessage().getTimeStamp()));
+        }
+    }
 
     synth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
 }
