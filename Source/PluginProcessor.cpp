@@ -161,7 +161,7 @@ void ShelSynthAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
             auto& sustain = *apvts.getRawParameterValue("SUSTAIN");
             auto& release = *apvts.getRawParameterValue("RELEASE");
             
-            voice->updateADSR(attak.load(), decay.load(), sustain.load(), release.load());
+            voice->update(attak.load(), decay.load(), sustain.load(), release.load());
         }
     }
     
