@@ -150,22 +150,21 @@ void ShelSynthAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
     
     for (int i = 0; i < synth.getNumVoices(); ++i)
     {
-        if (auto voice = dynamic_cast<juce::SynthesiserVoice*>(synth.getVoice(i)))
+        if (auto voice = dynamic_cast<SynthVoice*>(synth.getVoice(i)))
         {
             //osc controls
-            //adsr
             //lfo
+            
+            //adsr
+            auto& attak = *apvts.getRawParameterValue("ATTACK");
+            auto& decay = *apvts.getRawParameterValue("DECAY");
+            auto& sustain = *apvts.getRawParameterValue("SUSTAIN");
+            auto& release = *apvts.getRawParameterValue("RELEASE");
+            
+            voice->updateADSR(attak.load(), decay.load(), sustain.load(), release.load());
         }
     }
     
-    for (juce::MidiMessageMetadata metadata : midiMessages)
-    {
-        if(metadata.numBytes == 3)
-        {
-        juce::Logger::writeToLog ("Момент времени: " + juce::String (metadata.getMessage().getTimeStamp()));
-        }
-    }
-
     synth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
 }
 
