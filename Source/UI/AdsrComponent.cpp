@@ -12,13 +12,14 @@
 #include "AdsrComponent.h"
 
 //==============================================================================
-AdsrComponent::AdsrComponent(juce::AudioProcessorValueTreeState& apvts)
+AdsrComponent::AdsrComponent(juce::String name, juce::AudioProcessorValueTreeState& apvts, juce::String attackId, juce::String decayId, juce::String sustainId, juce::String releaseId)
 {
+    componentName = name;
     
-    setSliderWithLabel (attackSlider, attackLabel, apvts, "ATTACK", attackAttachment);
-    setSliderWithLabel (decaySlider, decayLabel, apvts, "DECAY", decayAttachment);
-    setSliderWithLabel (sustainSlider, sustainLabel, apvts, "SUSTAIN", sustainAttachment);
-    setSliderWithLabel (releaseSlider, releaseLabel, apvts, "RELEASE", releaseAttachment);
+    setSliderWithLabel (attackSlider, attackLabel, apvts, attackId, attackAttachment);
+    setSliderWithLabel (decaySlider, decayLabel, apvts, decayId, decayAttachment);
+    setSliderWithLabel (sustainSlider, sustainLabel, apvts, sustainId, sustainAttachment);
+    setSliderWithLabel (releaseSlider, releaseLabel, apvts, releaseId, releaseAttachment);
 }
 
 AdsrComponent::~AdsrComponent()
@@ -33,7 +34,7 @@ void AdsrComponent::paint (juce::Graphics& g)
     g.fillAll (juce::Colours::darkgrey);
     g.setColour(juce::Colours::white);
     g.setFont(20.f);
-    g.drawText("Envelope", labelSpace.withX(5), juce::Justification::left);
+    g.drawText(componentName, labelSpace.withX(5), juce::Justification::left);
     g.drawRoundedRectangle(bounds.toFloat(), 5.0f, 2.0f);
 }
 
