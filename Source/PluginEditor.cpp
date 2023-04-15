@@ -11,12 +11,17 @@
 
 //==============================================================================
 ShelSynthAudioProcessorEditor::ShelSynthAudioProcessorEditor (ShelSynthAudioProcessor& p)
-    : AudioProcessorEditor (&p), audioProcessor (p), osc (audioProcessor.apvts, "OSC1WAVETYPE", "OSC1FMFREQ", "OSC1FMDEPTH"), adsr (audioProcessor.apvts)
+    
+: AudioProcessorEditor (&p),
+audioProcessor (p),
+osc (audioProcessor.apvts, "OSC1WAVETYPE", "OSC1FMFREQ", "OSC1FMDEPTH"),
+adsr (audioProcessor.apvts),
+filter(audioProcessor.apvts, "FILTERTYPE", "FILTERCUTOFF", "FILTERRESONANCE")
 {
     setSize (600, 500);
     addAndMakeVisible(osc);
     addAndMakeVisible(adsr);
-    
+    addAndMakeVisible(filter);
 }
 
 ShelSynthAudioProcessorEditor::~ShelSynthAudioProcessorEditor()
@@ -39,6 +44,7 @@ void ShelSynthAudioProcessorEditor::resized()
     
     osc.setBounds(paddingX, paddingY, 300, 200);
     adsr.setBounds(osc.getRight(), paddingY, 280, 200);
+    filter.setBounds(paddingX, osc.getBottom() + paddingY, 300, 200);
 }
 
 

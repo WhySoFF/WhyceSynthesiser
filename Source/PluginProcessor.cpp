@@ -105,6 +105,8 @@ void ShelSynthAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
             voice->prepareToPlay(sampleRate, samplesPerBlock, getTotalNumOutputChannels());
         }
     }
+    
+    filter.prepareToPlay(sampleRate, samplesPerBlock, getTotalNumOutputChannels());
 }
 
 void ShelSynthAudioProcessor::releaseResources()
@@ -152,17 +154,16 @@ void ShelSynthAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
     {
         if (auto voice = dynamic_cast<SynthVoice*>(synth.getVoice(i)))
         {
-            //osc controls
-            //lfo
-            
             //adsr
             auto& attak = *apvts.getRawParameterValue("ATTACK");
             auto& decay = *apvts.getRawParameterValue("DECAY");
             auto& sustain = *apvts.getRawParameterValue("SUSTAIN");
             auto& release = *apvts.getRawParameterValue("RELEASE");
             
+            //osc control
             auto& oscWaveChoice = *apvts.getRawParameterValue("OSC1WAVETYPE");
             
+            //fm control
             auto& fmDepth = *apvts.getRawParameterValue("OSC1FMDEPTH");
             auto& fmFreq = *apvts.getRawParameterValue("OSC1FMFREQ");
             
@@ -174,6 +175,16 @@ void ShelSynthAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
     }
     
     synth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
+    
+    //Filter Stuff
+    
+    auto& filterType = *apvts.getRawParameterValue("FILTERTYPE");
+    auto& cutoff = *apvts.getRawParameterValue("FILTERCUTOFF");
+    auto& resonance = *apvts.getRawParameterValue("FILTERRESONANCE");
+    
+    filter.updateParameters(filterType, cutoff, resonance);
+    
+    filter.process(buffer);
 }
 
 //==============================================================================
@@ -208,6 +219,7 @@ juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
     return new ShelSynthAudioProcessor();
 }
 
+//list of parameters that user can modify
 juce::AudioProcessorValueTreeState::ParameterLayout ShelSynthAudioProcessor::createParams()
 {
 
@@ -217,7 +229,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout ShelSynthAudioProcessor::cre
     params.push_back(std::make_unique<juce::AudioParameterChoice>("OSC1WAVETYPE", "Osc 1 Wave Type", juce::StringArray {"Sine", "Saw", "Square" }, 0));
     
     // FM
-    //(start,end,.,skew),StartPosOnOpen
+    //(start,end,intervalValue,skew),StartPosOnOpen
     params.push_back(std::make_unique<juce::AudioParameterFloat>("OSC1FMFREQ", "Osc 1 FM Frequency", juce::NormalisableRange<float> { 0.0f, 1000.0f, 0.01f, 0.3f}, 0.0f));
     params.push_back(std::make_unique<juce::AudioParameterFloat>("OSC1FMDEPTH", "Osc 1 FM Depth", juce::NormalisableRange<float> { 0.0f, 1000.0f, 0.01f, 0.3f}, 0.0f));
     
@@ -227,7 +239,10 @@ juce::AudioProcessorValueTreeState::ParameterLayout ShelSynthAudioProcessor::cre
     params.push_back(std::make_unique<juce::AudioParameterFloat>("SUSTAIN", "Sustain", juce::NormalisableRange<float> { 0.1f, 1.0f, 0.1f }, 1.0f));
     params.push_back(std::make_unique<juce::AudioParameterFloat>("RELEASE", "Release", juce::NormalisableRange<float> { 0.1f, 3.0f, 0.1f }, 0.4f));
     
-    
+    //Filter
+    params.push_back(std::make_unique<juce::AudioParameterChoice>("FILTERTYPE", "Filter Type", juce::StringArray {"Low-Pass", "Band-Pass", "High-Pass" }, 0));
+    params.push_back(std::make_unique<juce::AudioParameterFloat>("FILTERCUTOFF", "Filter Cutoff", juce::NormalisableRange<float> { 20.0f, 20000.0f, 0.1f, 0.6f }, 20000.0f));
+    params.push_back(std::make_unique<juce::AudioParameterFloat>("FILTERRESONANCE", "Filter Resonance", juce::NormalisableRange<float> { 1.0f, 10.0f, 0.1f}, 1.0f));
     
     return { params.begin(), params.end() };
 }

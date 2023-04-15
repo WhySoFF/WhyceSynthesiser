@@ -31,7 +31,7 @@ void AdsrComponent::paint (juce::Graphics& g)
     auto labelSpace = bounds.removeFromTop (25.0f);
     
     g.fillAll (juce::Colours::darkgrey);
-    g.setColour(juce::Colours::black);
+    g.setColour(juce::Colours::white);
     g.setFont(20.f);
     g.drawText("Envelope", labelSpace.withX(5), juce::Justification::left);
     g.drawRoundedRectangle(bounds.toFloat(), 5.0f, 2.0f);
