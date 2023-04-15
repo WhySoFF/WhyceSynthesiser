@@ -15,13 +15,15 @@ ShelSynthAudioProcessorEditor::ShelSynthAudioProcessorEditor (ShelSynthAudioProc
 : AudioProcessorEditor (&p),
 audioProcessor (p),
 osc (audioProcessor.apvts, "OSC1WAVETYPE", "OSC1FMFREQ", "OSC1FMDEPTH"),
-adsr (audioProcessor.apvts),
-filter(audioProcessor.apvts, "FILTERTYPE", "FILTERCUTOFF", "FILTERRESONANCE")
+adsr ("Amp Envelope", audioProcessor.apvts, "ATTACK", "DECAY", "SUSTAIN", "RELEASE"),
+filter(audioProcessor.apvts, "FILTERTYPE", "FILTERCUTOFF", "FILTERRESONANCE"),
+modAdsr ("Mod Envelope", audioProcessor.apvts, "MODATTACK", "MODDECAY", "MODSUSTAIN", "MODRELEASE")
 {
-    setSize (600, 500);
+    setSize (620, 500);
     addAndMakeVisible(osc);
     addAndMakeVisible(adsr);
     addAndMakeVisible(filter);
+    addAndMakeVisible(modAdsr);
 }
 
 ShelSynthAudioProcessorEditor::~ShelSynthAudioProcessorEditor()
@@ -41,10 +43,13 @@ void ShelSynthAudioProcessorEditor::resized()
 {
     const auto paddingX = 5;
     const auto paddingY = 35;
+    const auto width = 300;
+    const auto height = 200;
     
-    osc.setBounds(paddingX, paddingY, 300, 200);
-    adsr.setBounds(osc.getRight(), paddingY, 280, 200);
-    filter.setBounds(paddingX, osc.getBottom() + paddingY, 300, 200);
+    osc.setBounds(paddingX, paddingY, width, height);
+    adsr.setBounds(osc.getRight(), paddingY, width, height);
+    filter.setBounds(paddingX, osc.getBottom() + paddingY, width, height);
+    modAdsr.setBounds(filter.getRight(), adsr.getBottom() + paddingY, width, height);
 }
 
 
