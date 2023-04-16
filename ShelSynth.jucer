@@ -32,6 +32,8 @@
         <FILE id="wR8srG" name="AdsrData.h" compile="0" resource="0" file="Source/Data/AdsrData.h"/>
         <FILE id="jkQAO3" name="FilterData.cpp" compile="1" resource="0" file="Source/Data/FilterData.cpp"/>
         <FILE id="lUNFZC" name="FilterData.h" compile="0" resource="0" file="Source/Data/FilterData.h"/>
+        <FILE id="cOH9aW" name="MeterData.cpp" compile="1" resource="0" file="Source/Data/MeterData.cpp"/>
+        <FILE id="coDRGz" name="MeterData.h" compile="0" resource="0" file="Source/Data/MeterData.h"/>
         <FILE id="ROaCoy" name="OscData.cpp" compile="1" resource="0" file="Source/Data/OscData.cpp"/>
         <FILE id="X60IHo" name="OscData.h" compile="0" resource="0" file="Source/Data/OscData.h"/>
       </GROUP>

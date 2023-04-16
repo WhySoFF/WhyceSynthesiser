@@ -1,25 +1,19 @@
-/*
-  ==============================================================================
-
-    FilterData.h
-    Created: 15 Apr 2023 8:53:07pm
-    Author:  Артем Шелегович
-
-  ==============================================================================
-*/
-
 #pragma once
 #include <JuceHeader.h>
+#include "OscData.h"
 
-class FilterData
+class FilterData : public juce::dsp::StateVariableTPTFilter<float>
 {
 public:
-    void prepareToPlay (double sampleRate, int samplesPerBlock, int numChannels);
-    void process (juce::AudioBuffer<float> buffer);
-    void updateParameters(const int filterType, const float frequency, const float resonance, const float modulator = 1.0f);
-    void reset();
+    FilterData();
+    void prepareToPlay (double sampleRate, int samplesPerBlock, int outputChannels);
+    void setParams (const int filterType, const float filterCutoff, const float filterResonance);
+    void setLfoParams (const float freq, const float depth);
+    void processNextBlock (juce::AudioBuffer<float>& buffer);
+    float processNextSample (int channel, float inputValue);
+    void resetAll();
     
 private:
-    juce::dsp::StateVariableTPTFilter<float> filter;
-    bool isPrepared { false };
+    void selectFilterType (const int type);
+    juce::dsp::Oscillator<float> lfo { [](float x) { return std::sin (x); }};
 };

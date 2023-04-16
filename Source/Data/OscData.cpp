@@ -1,22 +1,20 @@
-/*
-  ==============================================================================
-
-    OscData.cpp
-    Created: 14 Apr 2023 3:06:14pm
-    Author:  Артем Шелегович
-
-  ==============================================================================
-*/
-
 #include "OscData.h"
 
-void OscData::prepareToPlay(juce::dsp::ProcessSpec &spec)
+void OscData::prepareToPlay (double sampleRate, int samplesPerBlock, int outputChannels)
 {
-    fmOsc.prepare(spec);
-    prepare(spec);
+    resetAll();
+    
+    juce::dsp::ProcessSpec spec;
+    spec.maximumBlockSize = samplesPerBlock;
+    spec.sampleRate = sampleRate;
+    spec.numChannels = outputChannels;
+    
+    prepare (spec);
+    fmOsc.prepare (spec);
+    gain.prepare (spec);
 }
 
-void OscData::setWaveType(const int choice)
+void OscData::setType(const int choice)
 {
     switch (choice) {
         case 0:
@@ -40,29 +38,55 @@ void OscData::setWaveType(const int choice)
     }
 }
 
-void OscData::setWaveFrequency(const int midiNoteNumber)
+void OscData::setGain (const float levelInDecibels)
 {
-    setFrequency(juce::MidiMessage::getMidiNoteInHertz(midiNoteNumber) + fmMod);
+    gain.setGainDecibels (levelInDecibels);
+}
+
+void OscData::setOscPitch (const int pitch)
+{
+    lastPitch = pitch;
+    setFrequency (juce::MidiMessage::getMidiNoteInHertz ((lastMidiNote + lastPitch) + fmModulator));
+
+}
+
+void OscData::setFreq(const int midiNoteNumber)
+{
+    setFrequency(juce::MidiMessage::getMidiNoteInHertz(midiNoteNumber + lastPitch) + fmModulator);
     lastMidiNote = midiNoteNumber;
 }
 
-void OscData::getNextAudioBlock (juce::dsp::AudioBlock<float>& block)
+void OscData::setFmOsc (const float freq, const float depth)
 {
-    for (int ch = 0; ch < block.getNumChannels(); ++ch)
-    {
-        for (int sampl = 0; sampl < block.getNumSamples(); ++sampl)
-        {
-            fmMod = fmOsc.processSample(block.getSample(ch, sampl)) * fmDepth;
-        }
-    }
-    
-    process(juce::dsp::ProcessContextReplacing<float> (block));
+    fmDepth = depth;
+    fmOsc.setFrequency (freq);
+    setFrequency (juce::MidiMessage::getMidiNoteInHertz ((lastMidiNote + lastPitch) + fmModulator));
 }
 
-void OscData::setFmParams (const float depth, const float freq)
+void OscData::renderNextBlock (juce::dsp::AudioBlock<float>& audioBlock)
 {
-    fmOsc.setFrequency(freq);
-    fmDepth = depth;
-    auto currentFreq = juce::MidiMessage::getMidiNoteInHertz(lastMidiNote) + fmMod;
-    setFrequency(currentFreq >= 0 ? currentFreq : currentFreq * -1.0f);
+    jassert (audioBlock.getNumSamples() > 0);
+    process (juce::dsp::ProcessContextReplacing<float> (audioBlock));
+    gain.process (juce::dsp::ProcessContextReplacing<float> (audioBlock));
+}
+
+float OscData::processNextSample (float input)
+{
+    fmModulator = fmOsc.processSample (input) * fmDepth;
+    return gain.processSample (processSample (input));
+}
+
+void OscData::setParams (const int oscChoice, const float oscGain, const int oscPitch, const float fmFreq, const float fmDepth)
+{
+    setType (oscChoice);
+    setGain (oscGain);
+    setOscPitch (oscPitch);
+    setFmOsc (fmFreq, fmDepth);
+}
+
+void OscData::resetAll()
+{
+    reset();
+    fmOsc.reset();
+    gain.reset();
 }
