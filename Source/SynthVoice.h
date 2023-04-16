@@ -1,13 +1,3 @@
-/*
-  ==============================================================================
-
-    SynthVoice.h
-    Created: 13 Apr 2023 2:37:43am
-    Author:  Артем Шелегович
-
-  ==============================================================================
-*/
-
 #pragma once
 
 #include <JuceHeader.h>
@@ -27,20 +17,27 @@ public:
     void renderNextBlock (juce::AudioBuffer< float > &outputBuffer, int startSample, int numSamples) override;
     void pitchWheelMoved (int newPitchWheelValue) override;
     
-    void updateAdsr (const float attack, const float decay, const float sustain, const float release);
-    void updateFilter (const int filterType, const float cutoff, const float resonance);
-    void updateModAdsr (const float attack, const float decay, const float sustain, const float release);
+    void reset();
     
-    OscData& getOscillator() { return osc; }
+    std::array<OscData, 2>& getOscillator1() { return osc1; }
+    std::array<OscData, 2>& getOscillator2() { return osc2; }
+    AdsrData& getAdsr() { return adsr; }
+    AdsrData& getFilterAdsr() { return filterAdsr; }
+    float getFilterAdsrOutput() { return filterAdsrOutput; }
+    void updateModParams (const int filterType, const float filterCutoff, const float filterResonance, const float adsrDepth, const float lfoFreq, const float lfoDepth);
     
 private:
-    juce::AudioBuffer<float> synthBuffer;
-    
-    OscData osc;
+    static constexpr int numChannelsToProcess { 2 };
+    std::array<OscData, numChannelsToProcess> osc1;
+    std::array<OscData, numChannelsToProcess> osc2;
+    std::array<FilterData, numChannelsToProcess> filter;
+    std::array<juce::dsp::Oscillator<float>, numChannelsToProcess> lfo;
     AdsrData adsr;
-    FilterData filter;
-    AdsrData modAdsr;
-    juce::dsp::Gain<float> gain;
+    AdsrData filterAdsr;
+    juce::AudioBuffer<float> synthBuffer;
+    float filterAdsrOutput { 0.0f };
+    std::array<float, numChannelsToProcess> lfoOutput { 0.0f, 0.0f };
     
+    juce::dsp::Gain<float> gain;
     bool isPrepared { false };
 };
