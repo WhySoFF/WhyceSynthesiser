@@ -1,48 +1,29 @@
-/*
-  ==============================================================================
-
-    FilterComponent.h
-    Created: 15 Apr 2023 9:33:49pm
-    Author:  Артем Шелегович
-
-  ==============================================================================
-*/
-
 #pragma once
 
 #include <JuceHeader.h>
+#include "CustomComponent.h"
 
 //==============================================================================
 /*
 */
-class FilterComponent  : public juce::Component
+class FilterComponent  : public CustomComponent
 {
 public:
-    FilterComponent(juce::AudioProcessorValueTreeState& apvts, juce::String filterTypeSelectorId, juce::String filterCutoffId, juce::String filterResonanceId);
+    FilterComponent(juce::AudioProcessorValueTreeState& apvts, juce::String filterTypeId, juce::String cutoffId, juce::String resonanceId);
     ~FilterComponent() override;
 
-    void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
     
-    juce::ComboBox filterTypeSelector { "Filter Type" };
-    std::unique_ptr<juce::AudioProcessorValueTreeState::ComboBoxAttachment> filterTypeSelectorAttachment;
-    
-    juce::Slider filterCutoffSlider;
-    juce::Slider filterResonanceSlider;
-    
-    using Attachment = juce::AudioProcessorValueTreeState::SliderAttachment;
-    
-    std::unique_ptr<Attachment> filterCutoffAttachment;
-    std::unique_ptr<Attachment> filterResonanceAttachment;
-    
-    juce::Label filterSelectorLabel { "Filter Type", "Wave Type" };
-    juce::Label filterCutoffLabel { "Filter Cutoff", "Cutoff" };
-    juce::Label filterResonanceLabel { "Filter Resonance", "Resonance" };
-
-    
-    void setSliderWithLabel (juce::Slider& slider, juce::Label& label, juce::AudioProcessorValueTreeState& apvts, juce::String paramId, std::unique_ptr<Attachment>& attachment);
+    juce::ComboBox filterTypeSelector;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::ComboBoxAttachment> filterTypeAttachment;
+        
+    SliderWithLabel cutoff;
+    SliderWithLabel resonance;
+        
+    static constexpr int dialWidth = 70;
+    static constexpr int dialHeight = 70;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (FilterComponent)
 };

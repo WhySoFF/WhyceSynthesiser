@@ -1,52 +1,27 @@
-/*
-  ==============================================================================
-
-    AdsrComponent.h
-    Created: 14 Apr 2023 4:29:47am
-    Author:  Артем Шелегович
-
-  ==============================================================================
-*/
-
 #pragma once
 
 #include <JuceHeader.h>
+#include "CustomComponent.h"
 
 //==============================================================================
 /*
 */
-class AdsrComponent  : public juce::Component
+class AdsrComponent  : public CustomComponent
 {
 public:
-    AdsrComponent(juce::String name, juce::AudioProcessorValueTreeState& apvts, juce::String attackId, juce::String decayId, juce::String sustainId, juce::String releaseId);
+    AdsrComponent(juce::AudioProcessorValueTreeState& apvts, juce::String attackId, juce::String decayId, juce::String sustainId, juce::String releaseId);
     ~AdsrComponent() override;
 
-    void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
-    using Attachment = juce::AudioProcessorValueTreeState::SliderAttachment;
-
-    void setSliderWithLabel (juce::Slider& slider, juce::Label& label, juce::AudioProcessorValueTreeState& apvts, juce::String paramId, std::unique_ptr<Attachment>& attachment);
+    SliderWithLabel attack;
+    SliderWithLabel decay;
+    SliderWithLabel sustain;
+    SliderWithLabel release;
     
-    juce::Slider attackSlider;
-    juce::Slider decaySlider;
-    juce::Slider sustainSlider;
-    juce::Slider releaseSlider;
-    
-    using sliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
-    
-    std::unique_ptr<sliderAttachment> attackAttachment;
-    std::unique_ptr<sliderAttachment> decayAttachment;
-    std::unique_ptr<sliderAttachment> sustainAttachment;
-    std::unique_ptr<sliderAttachment> releaseAttachment;
-    
-    juce::Label attackLabel { "Attack", "A" };
-    juce::Label decayLabel { "Decay", "D" };
-    juce::Label sustainLabel { "Sustain", "S" };
-    juce::Label releaseLabel { "Release", "R" };
-    
-    juce::String componentName {""};
+    static constexpr int sliderWidth = 50;
+    static constexpr int sliderHeight = 260;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AdsrComponent)
 };

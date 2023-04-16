@@ -19,13 +19,30 @@
         <FILE id="rzmKY5" name="AdsrComponent.cpp" compile="1" resource="0"
               file="Source/UI/AdsrComponent.cpp"/>
         <FILE id="VkeAlP" name="AdsrComponent.h" compile="0" resource="0" file="Source/UI/AdsrComponent.h"/>
+        <FILE id="Jiaktz" name="Assets.cpp" compile="1" resource="0" file="Source/UI/Assets.cpp"/>
+        <FILE id="ROzLnF" name="Assets.h" compile="0" resource="0" file="Source/UI/Assets.h"/>
+        <FILE id="uQRD4a" name="CustomComponent.cpp" compile="1" resource="0"
+              file="Source/UI/CustomComponent.cpp"/>
+        <FILE id="GgAJbM" name="CustomComponent.h" compile="0" resource="0"
+              file="Source/UI/CustomComponent.h"/>
         <FILE id="fPB5k2" name="FilterComponent.cpp" compile="1" resource="0"
               file="Source/UI/FilterComponent.cpp"/>
         <FILE id="Hz1pBA" name="FilterComponent.h" compile="0" resource="0"
               file="Source/UI/FilterComponent.h"/>
+        <FILE id="jYUOzR" name="LfoComponent.cpp" compile="1" resource="0"
+              file="Source/UI/LfoComponent.cpp"/>
+        <FILE id="uz3H1J" name="LfoComponent.h" compile="0" resource="0" file="Source/UI/LfoComponent.h"/>
+        <FILE id="Um2CXp" name="MeterComponent.cpp" compile="1" resource="0"
+              file="Source/UI/MeterComponent.cpp"/>
+        <FILE id="NebbBW" name="MeterComponent.h" compile="0" resource="0"
+              file="Source/UI/MeterComponent.h"/>
         <FILE id="fTX5EW" name="OscComponent.cpp" compile="1" resource="0"
               file="Source/UI/OscComponent.cpp"/>
         <FILE id="t3J99T" name="OscComponent.h" compile="0" resource="0" file="Source/UI/OscComponent.h"/>
+        <FILE id="n0Na6d" name="ReverbComponent.cpp" compile="1" resource="0"
+              file="Source/UI/ReverbComponent.cpp"/>
+        <FILE id="jkDrkR" name="ReverbComponent.h" compile="0" resource="0"
+              file="Source/UI/ReverbComponent.h"/>
       </GROUP>
       <GROUP id="{B2668B0C-B70A-A17E-58D2-EAA1DF7480F8}" name="Data">
         <FILE id="HtAdrX" name="AdsrData.cpp" compile="1" resource="0" file="Source/Data/AdsrData.cpp"/>
