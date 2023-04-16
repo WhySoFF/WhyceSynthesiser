@@ -1,15 +1,16 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "CustomComponent.h"
 
 //==============================================================================
 /*
 */
-class OscComponent  : public CustomComponent
+class OscComponent : public CustomComponent
 {
 public:
-    OscComponent(juce::AudioProcessorValueTreeState& apvts, juce::String oscId, juce::String gainId, juce::String pitchId, juce::String fmPitchId, juce::String fmFreqId);
-    ~OscComponent() override;
+    OscComponent (juce::AudioProcessorValueTreeState& apvts, juce::String oscId, juce::String gainId, juce::String pitchId, juce::String fmPitchId, juce::String fmFreqId);
+        ~OscComponent() override;
 
     void resized() override;
 

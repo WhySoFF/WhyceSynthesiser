@@ -2,8 +2,14 @@
 
 <JUCERPROJECT id="mTGbmb" name="ShelSynth" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn">
+              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              companyWebsite="ShelegovichArtemSynthesisers" companyEmail="mrstingerhac@gmail.com"
+              companyName="WhyceSynthesisers">
   <MAINGROUP id="GSkCrh" name="ShelSynth">
+    <GROUP id="{FA972DD5-FBA7-8897-8CB5-7E851361FBBC}" name="Assets">
+      <FILE id="qEQBVn" name="test.png" compile="0" resource="1" file="Assets/test.png"
+            xcodeResource="0"/>
+    </GROUP>
     <GROUP id="{FE3362D7-8848-BE8D-358A-591C654A69F0}" name="Source">
       <FILE id="pykaqW" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>

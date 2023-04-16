@@ -2,7 +2,7 @@
 #include "MeterComponent.h"
 
 //==============================================================================
-MeterComponent::MeterComponent (TapSynthAudioProcessor& p) : audioProcessor (p)
+MeterComponent::MeterComponent (ShelSynthAudioProcessor& p) : audioProcessor (p)
 {
     // In your constructor, you should add any child components, and
     // initialise any special settings that your component needs.

@@ -50,6 +50,7 @@
 		6C15DB7C29EA627D13564610 /* FilterData.cpp */ = {isa = PBXBuildFile; fileRef = 35A05C7A2E3078D2612C0C14; };
 		6CBFCFA690E823CA8C2EEECE /* include_juce_core.mm */ = {isa = PBXBuildFile; fileRef = 81403F0A2B99480935BE9CCD; };
 		6F22DFA8A5248526AB1B36AB /* Cocoa.framework */ = {isa = PBXBuildFile; fileRef = A23BAFBE375BF3CEC735BB71; };
+		722AD0327E12723D8A9AB086 /* BinaryData.cpp */ = {isa = PBXBuildFile; fileRef = 2A1B1A3A3DCE8410B02CEB60; };
 		7862AA57F7D93A6982243932 /* OscComponent.cpp */ = {isa = PBXBuildFile; fileRef = 698D54E02EDBBC936218FD57; };
 		7F5422F6575A31B85609EC45 /* include_juce_audio_plugin_client_AU_2.mm */ = {isa = PBXBuildFile; fileRef = D024B679BCEC8E102BE3D495; };
 		81FB00E2943C0E96A93FB8CB /* include_juce_data_structures.mm */ = {isa = PBXBuildFile; fileRef = D704D3380DD082B522F69521; };
@@ -97,6 +98,7 @@
 		218FD8BEA633CC243365BA7A /* CustomComponent.cpp */ /* CustomComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CustomComponent.cpp; path = ../../Source/UI/CustomComponent.cpp; sourceTree = SOURCE_ROOT; };
 		2264F95A9942241D506D5653 /* FilterComponent.h */ /* FilterComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FilterComponent.h; path = ../../Source/UI/FilterComponent.h; sourceTree = SOURCE_ROOT; };
 		26A0E5B872BD775B6B8F9154 /* include_juce_audio_processors_ara.cpp */ /* include_juce_audio_processors_ara.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_processors_ara.cpp; path = ../../JuceLibraryCode/include_juce_audio_processors_ara.cpp; sourceTree = SOURCE_ROOT; };
+		2A1B1A3A3DCE8410B02CEB60 /* BinaryData.cpp */ /* BinaryData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryData.cpp; path = ../../JuceLibraryCode/BinaryData.cpp; sourceTree = SOURCE_ROOT; };
 		2F7A670DAF0F80E47DFC5B50 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
 		2F7CBC4B7730935EF0898481 /* MeterComponent.h */ /* MeterComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeterComponent.h; path = ../../Source/UI/MeterComponent.h; sourceTree = SOURCE_ROOT; };
 		315C476E7FA8BA70B9E45CD8 /* Info-Standalone_Plugin.plist */ /* Info-Standalone_Plugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Standalone_Plugin.plist"; path = "Info-Standalone_Plugin.plist"; sourceTree = SOURCE_ROOT; };
@@ -145,6 +147,7 @@
 		AA6DE0E8598735CBFCBDF503 /* AudioToolbox.framework */ /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		ABC21CB9EFBBAC3A10D3D3B2 /* VST3 */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelSynth.vst3; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02E46B66954C06DE8FFEF0D /* CoreAudio.framework */ /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		B078D76DF3D4EF8CC92F2009 /* test.png */ /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = ../../Assets/test.png; sourceTree = SOURCE_ROOT; };
 		B2DC5B97B44BE35B513C2634 /* FilterComponent.cpp */ /* FilterComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FilterComponent.cpp; path = ../../Source/UI/FilterComponent.cpp; sourceTree = SOURCE_ROOT; };
 		B44CCEA9F59896E188FB0A4C /* JucePluginDefines.h */ /* JucePluginDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JucePluginDefines.h; path = ../../JuceLibraryCode/JucePluginDefines.h; sourceTree = SOURCE_ROOT; };
 		B4B90C48173C927651FABCAB /* juce_audio_plugin_client */ /* juce_audio_plugin_client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_plugin_client; path = /Applications/JUCE/modules/juce_audio_plugin_client; sourceTree = "<absolute>"; };
@@ -163,6 +166,7 @@
 		E469E6E110DF779B1EA2ED26 /* DiscRecording.framework */ /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = System/Library/Frameworks/DiscRecording.framework; sourceTree = SDKROOT; };
 		E504E9898B19EAA593BC8137 /* OscComponent.h */ /* OscComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OscComponent.h; path = ../../Source/UI/OscComponent.h; sourceTree = SOURCE_ROOT; };
 		EF5F33BC5348D3A2E54FE13C /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		F2780B655AED339E6D54CD8E /* BinaryData.h */ /* BinaryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinaryData.h; path = ../../JuceLibraryCode/BinaryData.h; sourceTree = SOURCE_ROOT; };
 		F4A7EB57CACC4FC5434EAA07 /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F8D16C1CF7DB9FF5424BB016 /* FilterData.h */ /* FilterData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FilterData.h; path = ../../Source/Data/FilterData.h; sourceTree = SOURCE_ROOT; };
 		FC6049DAB50FC8435AA819B3 /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShelSynth.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +254,7 @@
 		3064D720B319F6254ABD45A7 /* ShelSynth */ = {
 			isa = PBXGroup;
 			children = (
+				3B5A5AAF17B691A16E01C8ED,
 				84DF2FF01672DFC031C385C0,
 			);
 			name = ShelSynth;
@@ -258,6 +263,8 @@
 		37C03A4DB2E9CD4D69E9FE25 /* JUCE Library Code */ = {
 			isa = PBXGroup;
 			children = (
+				2A1B1A3A3DCE8410B02CEB60,
+				F2780B655AED339E6D54CD8E,
 				606ACEDFFBED751137A08D66,
 				00579710E651877B74CD1800,
 				0A42243E222B4A1A52332F92,
@@ -283,6 +290,14 @@
 				B44CCEA9F59896E188FB0A4C,
 			);
 			name = "JUCE Library Code";
+			sourceTree = "<group>";
+		};
+		3B5A5AAF17B691A16E01C8ED /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B078D76DF3D4EF8CC92F2009,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		4868ACA68C69F7B4E3BA728E /* Source */ = {
@@ -473,7 +488,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1340;
-				ORGANIZATIONNAME = "";
+				ORGANIZATIONNAME = "WhyceSynthesisers";
 				TargetAttributes = {
 					2A2E81CB7567637209F78BF3 = {
 						SystemCapabilities = {
@@ -654,6 +669,7 @@
 				6C15DB7C29EA627D13564610,
 				5792486E4B56F166EC6054AF,
 				65AA953224B6E6DDABED45F9,
+				722AD0327E12723D8A9AB086,
 				D79F425FC14B6AEE9ADD0E0F,
 				538CB197DD1F1A246B8B4980,
 				5EDE4909DA0F8AB1B571AD29,
@@ -781,9 +797,9 @@
 					"JucePlugin_Enable_ARA=0",
 					"JucePlugin_Name=\\\"ShelSynth\\\"",
 					"JucePlugin_Desc=\\\"ShelSynth\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
-					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"WhyceSynthesisers\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"ShelegovichArtemSynthesisers\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"mrstingerhac@gmail.com\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x4d746762",
 					"JucePlugin_IsSynth=1",
@@ -802,8 +818,8 @@
 					"JucePlugin_AUExportPrefix=ShelSynthAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"ShelSynthAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ShelSynth",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ShelSynth",
+					"JucePlugin_CFBundleIdentifier=com.WhyceSynthesisers.ShelSynth",
+					"JucePlugin_AAXIdentifier=com.WhyceSynthesisers.ShelSynth",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -811,13 +827,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ ShelSynth\\\"",
+					"JucePlugin_IAAName=\\\"WhyceSynthesisers:\\ ShelSynth\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.ShelSynth.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.ShelSynth.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.WhyceSynthesisers.ShelSynth.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.WhyceSynthesisers.ShelSynth.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -840,7 +856,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /Applications/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_LDFLAGS = "-bundle -lShelSynth -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ShelSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhyceSynthesisers.ShelSynth;
 				PRODUCT_NAME = "ShelSynth";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -943,9 +959,9 @@
 					"JucePlugin_Enable_ARA=0",
 					"JucePlugin_Name=\\\"ShelSynth\\\"",
 					"JucePlugin_Desc=\\\"ShelSynth\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
-					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"WhyceSynthesisers\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"ShelegovichArtemSynthesisers\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"mrstingerhac@gmail.com\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x4d746762",
 					"JucePlugin_IsSynth=1",
@@ -964,8 +980,8 @@
 					"JucePlugin_AUExportPrefix=ShelSynthAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"ShelSynthAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ShelSynth",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ShelSynth",
+					"JucePlugin_CFBundleIdentifier=com.WhyceSynthesisers.ShelSynth",
+					"JucePlugin_AAXIdentifier=com.WhyceSynthesisers.ShelSynth",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -973,13 +989,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ ShelSynth\\\"",
+					"JucePlugin_IAAName=\\\"WhyceSynthesisers:\\ ShelSynth\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.ShelSynth.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.ShelSynth.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.WhyceSynthesisers.ShelSynth.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.WhyceSynthesisers.ShelSynth.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1003,7 +1019,7 @@
 				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /Applications/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_LDFLAGS = "-bundle -lShelSynth -weak_framework Metal -weak_framework MetalKit";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ShelSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhyceSynthesisers.ShelSynth;
 				PRODUCT_NAME = "ShelSynth";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1059,9 +1075,9 @@
 					"JucePlugin_Enable_ARA=0",
 					"JucePlugin_Name=\\\"ShelSynth\\\"",
 					"JucePlugin_Desc=\\\"ShelSynth\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
-					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"WhyceSynthesisers\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"ShelegovichArtemSynthesisers\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"mrstingerhac@gmail.com\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x4d746762",
 					"JucePlugin_IsSynth=1",
@@ -1080,8 +1096,8 @@
 					"JucePlugin_AUExportPrefix=ShelSynthAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"ShelSynthAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ShelSynth",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ShelSynth",
+					"JucePlugin_CFBundleIdentifier=com.WhyceSynthesisers.ShelSynth",
+					"JucePlugin_AAXIdentifier=com.WhyceSynthesisers.ShelSynth",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -1089,13 +1105,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ ShelSynth\\\"",
+					"JucePlugin_IAAName=\\\"WhyceSynthesisers:\\ ShelSynth\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.ShelSynth.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.ShelSynth.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.WhyceSynthesisers.ShelSynth.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.WhyceSynthesisers.ShelSynth.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1120,7 +1136,7 @@
 				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /Applications/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_LDFLAGS = "-bundle -lShelSynth -weak_framework Metal -weak_framework MetalKit";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ShelSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhyceSynthesisers.ShelSynth;
 				PRODUCT_NAME = "ShelSynth";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1174,9 +1190,9 @@
 					"JucePlugin_Enable_ARA=0",
 					"JucePlugin_Name=\\\"ShelSynth\\\"",
 					"JucePlugin_Desc=\\\"ShelSynth\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
-					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"WhyceSynthesisers\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"ShelegovichArtemSynthesisers\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"mrstingerhac@gmail.com\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x4d746762",
 					"JucePlugin_IsSynth=1",
@@ -1195,8 +1211,8 @@
 					"JucePlugin_AUExportPrefix=ShelSynthAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"ShelSynthAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ShelSynth",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ShelSynth",
+					"JucePlugin_CFBundleIdentifier=com.WhyceSynthesisers.ShelSynth",
+					"JucePlugin_AAXIdentifier=com.WhyceSynthesisers.ShelSynth",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -1204,13 +1220,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ ShelSynth\\\"",
+					"JucePlugin_IAAName=\\\"WhyceSynthesisers:\\ ShelSynth\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.ShelSynth.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.ShelSynth.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.WhyceSynthesisers.ShelSynth.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.WhyceSynthesisers.ShelSynth.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1230,7 +1246,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /Applications/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_LDFLAGS = "-lShelSynth -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ShelSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhyceSynthesisers.ShelSynth;
 				PRODUCT_NAME = "ShelSynth";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1291,9 +1307,9 @@
 					"JucePlugin_Enable_ARA=0",
 					"JucePlugin_Name=\\\"ShelSynth\\\"",
 					"JucePlugin_Desc=\\\"ShelSynth\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
-					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"WhyceSynthesisers\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"ShelegovichArtemSynthesisers\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"mrstingerhac@gmail.com\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x4d746762",
 					"JucePlugin_IsSynth=1",
@@ -1312,8 +1328,8 @@
 					"JucePlugin_AUExportPrefix=ShelSynthAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"ShelSynthAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ShelSynth",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ShelSynth",
+					"JucePlugin_CFBundleIdentifier=com.WhyceSynthesisers.ShelSynth",
+					"JucePlugin_AAXIdentifier=com.WhyceSynthesisers.ShelSynth",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -1321,13 +1337,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ ShelSynth\\\"",
+					"JucePlugin_IAAName=\\\"WhyceSynthesisers:\\ ShelSynth\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.ShelSynth.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.ShelSynth.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.WhyceSynthesisers.ShelSynth.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.WhyceSynthesisers.ShelSynth.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1348,7 +1364,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /Applications/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_LDFLAGS = "-weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ShelSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhyceSynthesisers.ShelSynth;
 				PRODUCT_NAME = "ShelSynth";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
@@ -1402,9 +1418,9 @@
 					"JucePlugin_Enable_ARA=0",
 					"JucePlugin_Name=\\\"ShelSynth\\\"",
 					"JucePlugin_Desc=\\\"ShelSynth\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
-					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"WhyceSynthesisers\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"ShelegovichArtemSynthesisers\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"mrstingerhac@gmail.com\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x4d746762",
 					"JucePlugin_IsSynth=1",
@@ -1423,8 +1439,8 @@
 					"JucePlugin_AUExportPrefix=ShelSynthAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"ShelSynthAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ShelSynth",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ShelSynth",
+					"JucePlugin_CFBundleIdentifier=com.WhyceSynthesisers.ShelSynth",
+					"JucePlugin_AAXIdentifier=com.WhyceSynthesisers.ShelSynth",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -1432,13 +1448,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ ShelSynth\\\"",
+					"JucePlugin_IAAName=\\\"WhyceSynthesisers:\\ ShelSynth\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.ShelSynth.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.ShelSynth.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.WhyceSynthesisers.ShelSynth.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.WhyceSynthesisers.ShelSynth.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1459,7 +1475,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /Applications/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_LDFLAGS = "-lShelSynth -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ShelSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhyceSynthesisers.ShelSynth;
 				PRODUCT_NAME = "ShelSynth";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1522,9 +1538,9 @@
 					"JucePlugin_Enable_ARA=0",
 					"JucePlugin_Name=\\\"ShelSynth\\\"",
 					"JucePlugin_Desc=\\\"ShelSynth\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
-					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"WhyceSynthesisers\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"ShelegovichArtemSynthesisers\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"mrstingerhac@gmail.com\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x4d746762",
 					"JucePlugin_IsSynth=1",
@@ -1543,8 +1559,8 @@
 					"JucePlugin_AUExportPrefix=ShelSynthAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"ShelSynthAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ShelSynth",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ShelSynth",
+					"JucePlugin_CFBundleIdentifier=com.WhyceSynthesisers.ShelSynth",
+					"JucePlugin_AAXIdentifier=com.WhyceSynthesisers.ShelSynth",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -1552,13 +1568,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ ShelSynth\\\"",
+					"JucePlugin_IAAName=\\\"WhyceSynthesisers:\\ ShelSynth\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.ShelSynth.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.ShelSynth.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.WhyceSynthesisers.ShelSynth.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.WhyceSynthesisers.ShelSynth.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1582,7 +1598,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /Applications/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_LDFLAGS = "-bundle -lShelSynth -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ShelSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhyceSynthesisers.ShelSynth;
 				PRODUCT_NAME = "ShelSynth";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1636,9 +1652,9 @@
 					"JucePlugin_Enable_ARA=0",
 					"JucePlugin_Name=\\\"ShelSynth\\\"",
 					"JucePlugin_Desc=\\\"ShelSynth\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
-					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"WhyceSynthesisers\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"ShelegovichArtemSynthesisers\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"mrstingerhac@gmail.com\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x4d746762",
 					"JucePlugin_IsSynth=1",
@@ -1657,8 +1673,8 @@
 					"JucePlugin_AUExportPrefix=ShelSynthAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"ShelSynthAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ShelSynth",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ShelSynth",
+					"JucePlugin_CFBundleIdentifier=com.WhyceSynthesisers.ShelSynth",
+					"JucePlugin_AAXIdentifier=com.WhyceSynthesisers.ShelSynth",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -1666,13 +1682,13 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ ShelSynth\\\"",
+					"JucePlugin_IAAName=\\\"WhyceSynthesisers:\\ ShelSynth\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.ShelSynth.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.ShelSynth.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.WhyceSynthesisers.ShelSynth.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.WhyceSynthesisers.ShelSynth.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1692,7 +1708,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "/Applications/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Applications/JUCE/modules /Applications/JUCE/modules/juce_audio_plugin_client/AU";
 				OTHER_LDFLAGS = "-weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ShelSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhyceSynthesisers.ShelSynth;
 				PRODUCT_NAME = "ShelSynth";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;

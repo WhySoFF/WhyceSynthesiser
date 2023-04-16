@@ -8,7 +8,7 @@
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.ShelSynth</string>
+    <string>com.WhyceSynthesisers.ShelSynth</string>
     <key>CFBundleName</key>
     <string>ShelSynth</string>
     <key>CFBundleDisplayName</key>

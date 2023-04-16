@@ -8,15 +8,15 @@ ShelSynthAudioProcessorEditor::ShelSynthAudioProcessorEditor (ShelSynthAudioProc
 audioProcessor (p)
 , osc1 (audioProcessor.apvts, "OSC1", "OSC1GAIN", "OSC1PITCH", "OSC1FMFREQ", "OSC1FMDEPTH")
 , osc2 (audioProcessor.apvts, "OSC2", "OSC2GAIN", "OSC2PITCH", "OSC2FMFREQ", "OSC2FMDEPTH")
-, filter (audioProcessor.apvts, "FILTERTYPE", "FILTERCUTOFF", "FILTERRESONANCE")
 , adsr (audioProcessor.apvts, "ATTACK", "DECAY", "SUSTAIN", "RELEASE")
+, filter (audioProcessor.apvts, "FILTERTYPE", "FILTERCUTOFF", "FILTERRESONANCE")
 , lfo1 (audioProcessor.apvts, "LFO1FREQ", "LFO1DEPTH")
 , filterAdsr (audioProcessor.apvts, "FILTERATTACK", "FILTERDECAY", "FILTERSUSTAIN", "FILTERRELEASE")
 , reverb (audioProcessor.apvts, "REVERBSIZE", "REVERBDAMPING", "REVERBWIDTH", "REVERBDRY", "REVERBWET", "REVERBFREEZE")
 , meter (audioProcessor)
 {
     auto MyImage = juce::ImageCache::getFromMemory (BinaryData::test_png, BinaryData::test_pngSize);
-        
+
         if (MyImage.isValid())
             logo.setImage (MyImage, juce::RectanglePlacement::stretchToFit);
         else

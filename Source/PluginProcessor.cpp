@@ -260,7 +260,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout ShelSynthAudioProcessor::cre
     return { params.begin(), params.end() };
 }
 
-void ShelSynthAudioProcessor::setVoiceParams()
+void ShelSynthAudioProcessor::setParams()
 {
     for (int i = 0; i < synth.getNumVoices(); ++i)
     {
